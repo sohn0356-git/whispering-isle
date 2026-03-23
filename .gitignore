@@ -1,14 +1,64 @@
-# OS artifacts
+# OS
 .DS_Store
 Thumbs.db
+Desktop.ini
 
-# Editor settings
+# Editors / IDE
 .vscode/
 .idea/
+*.code-workspace
 
-# Build outputs
+# General build artifacts
 build/
 dist/
-
-# Logs
+out/
 *.log
+*.tmp
+*.bak
+
+# Unity
+Library/
+Temp/
+Obj/
+Build/
+Builds/
+Logs/
+MemoryCaptures/
+*.unityproj
+*.pidb
+*.suo
+*.user
+*.userprefs
+*.csproj
+*.unitypackage
+
+# Unreal
+Saved/
+Intermediate/
+DerivedDataCache/
+*.VC.db
+*.opensdf
+*.sdf
+*.suo
+*_BuiltData.uasset
+
+# Godot
+.export/
+.import/
+mono/
+*.translation
+
+# Platform-specific
+[Bb]inaries/
+*.pdb
+*.dSYM/
+
+# Asset caches
+__pycache__/
+*.blend1
+*.fbx~
+
+# Misc
+.env
+.env.*
+.DS_Store?
