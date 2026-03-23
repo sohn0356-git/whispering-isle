@@ -1,0 +1,14 @@
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Editor settings
+.vscode/
+.idea/
+
+# Build outputs
+build/
+dist/
+
+# Logs
+*.log
