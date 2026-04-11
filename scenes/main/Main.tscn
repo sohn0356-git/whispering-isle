@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://duqfahv6j8xmy"]
+
+[ext_resource type="Script" uid="uid://b1bhkfiqx1q1e" path="res://scenes/main/Main.gd" id="1_j0vrn"]
+
+[node name="Main" type="Node" unique_id=1040081019]
+script = ExtResource("1_j0vrn")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=955743811]
+
+[node name="FallbackLabel" type="Label" parent="CanvasLayer" unique_id=519617722]
+visible = false
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 700.0
+offset_bottom = 120.0
+text = "Village scene is not ready yet."
+autowrap_mode = 3

@@ -1,0 +1,91 @@
+[gd_scene load_steps=7 format=3 uid="uid://bxq16x8kpw8pc"]
+
+[ext_resource type="Script" path="res://scenes/village/Village.gd" id="1_kxf1n"]
+[ext_resource type="PackedScene" path="res://scenes/player/Player.tscn" id="2_crxr7"]
+[ext_resource type="PackedScene" path="res://scenes/npc/NPC.tscn" id="3_u02jq"]
+[ext_resource type="PackedScene" path="res://scenes/ui/DialogBox.tscn" id="4_0eh6d"]
+[ext_resource type="Script" path="res://scripts/ExplorerManager.gd" id="5_9llf2"]
+[ext_resource type="PackedScene" path="res://scenes/ui/ExplorerStatusPanel.tscn" id="6_8lmo5"]
+
+[node name="Village" type="Node2D"]
+script = ExtResource("1_kxf1n")
+
+[node name="Environment" type="Node2D" parent="."]
+
+[node name="GroundTiles" type="Node2D" parent="Environment"]
+
+[node name="StructureTiles" type="Node2D" parent="Environment"]
+
+[node name="DecorTiles" type="Node2D" parent="Environment"]
+
+[node name="ZoneLabels" type="Node2D" parent="."]
+
+[node name="InnLabel" type="Label" parent="ZoneLabels"]
+offset_left = 112.0
+offset_top = 58.0
+offset_right = 176.0
+offset_bottom = 82.0
+text = "INN"
+horizontal_alignment = 1
+
+[node name="ShopLabel" type="Label" parent="ZoneLabels"]
+offset_left = 666.0
+offset_top = 58.0
+offset_right = 732.0
+offset_bottom = 82.0
+text = "SHOP"
+horizontal_alignment = 1
+
+[node name="PlazaLabel" type="Label" parent="ZoneLabels"]
+offset_left = 418.0
+offset_top = 188.0
+offset_right = 520.0
+offset_bottom = 212.0
+text = "PLAZA"
+horizontal_alignment = 1
+
+[node name="GateLabel" type="Label" parent="ZoneLabels"]
+offset_left = 808.0
+offset_top = 170.0
+offset_right = 930.0
+offset_bottom = 210.0
+text = "LABYRINTH GATE"
+horizontal_alignment = 1
+
+[node name="Player" parent="." instance=ExtResource("2_crxr7")]
+position = Vector2(456, 392)
+
+[node name="Explorers" type="Node2D" parent="."]
+
+[node name="ExplorerManager" type="Node" parent="."]
+script = ExtResource("5_9llf2")
+
+[node name="NPCMayor" parent="." instance=ExtResource("3_u02jq")]
+position = Vector2(376, 296)
+npc_name = "Mayor Rowan"
+dialogue_lines = PackedStringArray("The village finally looks like a proper town.", "From here you can watch adventurers drift between the inn, plaza, shop, and gate.", "Soon the real tiles can replace these temporary pixel blocks.")
+
+[node name="NPCMerchant" parent="." instance=ExtResource("3_u02jq")]
+position = Vector2(712, 184)
+npc_name = "Mira"
+dialogue_lines = PackedStringArray("These tiles are temporary, but they follow the real pixel grid already.", "When the final environment art arrives, it can drop into the same village layout.", "Until then, the town should still read like a classic RPG.")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PlayerInfo" type="Label" parent="CanvasLayer"]
+offset_left = 16.0
+offset_top = 12.0
+offset_right = 260.0
+offset_bottom = 38.0
+text = "Traveler the Warrior"
+
+[node name="HelpText" type="Label" parent="CanvasLayer"]
+offset_left = 16.0
+offset_top = 38.0
+offset_right = 420.0
+offset_bottom = 96.0
+text = "16x16 tile village | Move: WASD / Arrows | Interact: E"
+
+[node name="DialogBox" parent="CanvasLayer" instance=ExtResource("4_0eh6d")]
+
+[node name="ExplorerStatusPanel" parent="CanvasLayer" instance=ExtResource("6_8lmo5")]

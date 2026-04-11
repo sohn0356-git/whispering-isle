@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=3 uid="uid://dofe3fv0vtwqs"]
+
+[ext_resource type="Script" path="res://scenes/explorer/Explorer.gd" id="1_n0d3h"]
+
+[node name="Explorer" type="Node2D"]
+script = ExtResource("1_n0d3h")
+
+[node name="SpriteRoot" type="Node2D" parent="."]
+position = Vector2(0, -2)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="SpriteRoot"]
+visible = false
+position = Vector2(0, -4)
+centered = true
+
+[node name="Visual" type="Polygon2D" parent="."]
+polygon = PackedVector2Array([Vector2(0, -11), Vector2(10, -3), Vector2(6, 10), Vector2(-6, 10), Vector2(-10, -3)])
+color = Color(0.85, 0.85, 0.85, 1)
+
+[node name="NameLabel" type="Label" parent="."]
+offset_left = -34.0
+offset_top = -46.0
+offset_right = 34.0
+offset_bottom = -24.0
+horizontal_alignment = 1
+text = "Arin"
+
+[node name="TitleLabel" type="Label" parent="."]
+offset_left = -46.0
+offset_top = -28.0
+offset_right = 48.0
+offset_bottom = -8.0
+horizontal_alignment = 1
+text = "Elf Ranger"
+
+[node name="StateLabel" type="Label" parent="."]
+offset_left = -42.0
+offset_top = 12.0
+offset_right = 44.0
+offset_bottom = 36.0
+horizontal_alignment = 1
+text = "Idle"

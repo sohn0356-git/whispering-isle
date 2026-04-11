@@ -1,0 +1,9 @@
+res://scenes/explorer/Explorer.gd
+res://scenes/village/Village.gd
+res://scenes/main/Main.tscn
+res://scenes/explorer/Explorer.tscn
+res://scenes/ui/ExplorerStatusPanel.gd
+res://scripts/ExplorerData.gd
+res://scripts/ExplorerManager.gd
+res://scripts/ExplorerAppearanceGenerator.gd
+res://scripts/ExplorerAppearanceData.gd
